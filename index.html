@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aparecida Nutrição</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <h1 class="titulo">Aparecida Nutrição</h1>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <h2>Meus pacientes</h2>
+            <label for="filtro">Filtrar</label>
+            <input type="text" id="filtro" name="filtro" placeholder="Digite o nome do paciente"
+                class="filtro-paciente">
+            <table class="tabela">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Peso(kg)</th>
+                        <th>Altura(m)</th>
+                        <th>Gordura Corporal(%)</th>
+                        <th>IMC</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-pacientes">
+                    <tr class="paciente">
+                        <td class="info-nome">Paulo</td>
+                        <td class="info-peso">300</td>
+                        <td class="info-altura">1.70</td>
+                        <td class="info-gordura">10</td>
+                        <td class="info-imc">0</td>
+                    </tr>
+
+                    <tr class="paciente">
+                        <td class="info-nome">João</td>
+                        <td class="info-peso">80</td>
+                        <td class="info-altura">1.42</td>
+                        <td class="info-gordura">40</td>
+                        <td class="info-imc">0</td>
+                    </tr>
+
+                    <tr class="paciente">
+                        <td class="info-nome">Erica</td>
+                        <td class="info-peso">54</td>
+                        <td class="info-altura">1.64</td>
+                        <td class="info-gordura">14</td>
+                        <td class="info-imc">0</td>
+                    </tr>
+
+                    <tr class="paciente">
+                        <td class="info-nome">Douglas</td>
+                        <td class="info-peso">85</td>
+                        <td class="info-altura">1.73</td>
+                        <td class="info-gordura">24</td>
+                        <td class="info-imc">0</td>
+                    </tr>
+                    <tr class="paciente">
+                        <td class="info-nome">Tatiana</td>
+                        <td class="info-peso">46</td>
+                        <td class="info-altura">1.55</td>
+                        <td class="info-gordura">19</td>
+                        <td class="info-imc">0</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button type="submit" id="buscar-paciente" class="botao bto-principal">Upload Lista</button>
+        </section>
+        <section class="container">
+            <h3>Legenda IMC:</h3>
+            <table class="tabela-legenda">
+                <thead>
+                    <tr>
+                        <th>< 17</th>
+                        <th>17 a 18,4</th>
+                        <th>18,5 a 24,9</th>
+                        <th>25 a 29,9</th>
+                        <th>30 a 34,9</th>
+                        <th>35 a 40</th>
+                        <th>> 40</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="classificacao-imc peso-muito-abaixo">Muito abaixo do peso</td>
+                        <td class="classificacao-imc peso-abaixo">Abaixo do peso</td>
+                        <td class="classificacao-imc peso-normal">Peso normal</td>
+                        <td class="classificacao-imc peso-acima">Acima do peso</td>
+                        <td class="classificacao-imc peso-obesidade-I">Obesidade I</td>
+                        <td class="classificacao-imc peso-obesidade-II">Obesidade II</td>
+                        <td class="classificacao-imc peso-obesidade-III">Obesidade III (mórbida)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <section class="container">
+        <h2 class="titulo-form">Adicionar novo paciente</h2>
+        <form action="" id="form-adicionar">
+            <div class="">
+                <label for="nome">Nome: <span id="erro-nome"></span></label>
+                <input type="text" id="nome" name="nome" placeholder="Nome do(a) paciente" class="campo" required>
+            </div>
+            <div class="grupo">
+                <label for="peso">Peso(kg): <span id="erro-peso"></span></label>
+                <input type="text" id="peso" name="peso" placeholder="Peso(kg) do(a) paciente" class="campo campo-medio"
+                    required>
+            </div>
+            <div class="grupo">
+                <label for="altura">Altura(m): <span id="erro-altura"></span></label>
+                <input type="text" id="altura" name="altura" placeholder="Altura(m) do(a) paciente"
+                    class="campo campo-medio" required>
+            </div>
+            <div class="grupo">
+                <label for="gordura">Gordura corporal(%): <span id="erro-gordura"></span></label>
+                <input type="text" id="gordura" name="gordura" placeholder="Gordura corporal(%) do(a) paciente"
+                    class="campo campo-medio" required>
+            </div>
+            <button type="submit" id="adicionar-paciente" class="botao bto-principal">Adicionar</button>
+        </form>
+    </section>
+    <script src="js/calcula-imc.js"></script>
+    <script src="js/form.js"></script>
+    <script src="js/remove-paciente.js"></script>
+    <script src="js/filtra-paciente.js"></script>
+    <script src="js/busca-paciente.js"></script>
+</body>
+
+</html>
