@@ -10,6 +10,7 @@ botaoBuscar.addEventListener("click", function () {
         buscaPacientes.forEach(function(paciente) {
             adicionarPacienteNaTabela(paciente);
         });
+        pacientes = document.querySelectorAll(".paciente");
     });
 
     xhr.send();
