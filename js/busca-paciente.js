@@ -11,6 +11,7 @@ botaoBuscar.addEventListener("click", function () {
             adicionarPacienteNaTabela(paciente);
         });
         pacientes = document.querySelectorAll(".paciente");
+        // adicionaLegendaColorida();
     });
 
     xhr.send();
