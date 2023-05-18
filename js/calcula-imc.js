@@ -1,4 +1,4 @@
-// function adicionaLegendaColorida() {
+function adicionaLegendaColorida() {
     let titulo = document.querySelector(".titulo");
     titulo.textContent = "Aparecida Nutricionista";
 
@@ -55,9 +55,9 @@
             }
         }
     }
-// }
+}
 
-// adicionaLegendaColorida();
+adicionaLegendaColorida();
 
 function calcularImc(peso, altura) {
     let imcFormula = 0;
