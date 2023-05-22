@@ -34,6 +34,7 @@ botaoAdicionarPaciente.addEventListener("click", function (event) {  // criando 
     }
 
     adicionarPacienteNaTabela(paciente);
+    adicionaLegendaColorida();
 
     formularioPaciente.reset();  // limpa os dados do formulário após adicionar paciente
 });
@@ -42,6 +43,10 @@ function adicionarPacienteNaTabela(paciente) {
     let itemTr = montarTr(paciente);
     let tabela = document.querySelector("#tabela-pacientes");  // variável para armazenar a tabela
     tabela.appendChild(itemTr);  // definindo hierarquia - tabela(pai) -> itemTr(filho)
+
+    pacientes = document.querySelectorAll(".paciente");
+
+    filtrarPacientes();
 }
 
 function obterPacienteDoFormulario(form) {  // função para criação do objeto
